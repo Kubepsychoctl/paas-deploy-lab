@@ -9,7 +9,7 @@ Deployed to Render (free web service). Endpoints:
 """
 from flask import Flask, jsonify, request
 
-VERSION = "v1"
+VERSION = "v2-broken"
 
 app = Flask(__name__)
 
@@ -25,7 +25,7 @@ def home():
 
 @app.route("/health")
 def health():
-    return jsonify({"status": "healthy"})
+    return jsonify({"status": "unhealthy"})
 
 
 @app.route("/users", methods=["POST"])
